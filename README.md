@@ -31,6 +31,12 @@ The following section contains the detail about how to setup a video super resol
 ### Working With Real-ESRGAN Model 
 The following steps walkthrough the process of building a docker image packaged with Real-ESRGAN Model and push to ECR.
 
+Create a `genai-realesrgan-4x-super-resolution` repository in Amazon ECR using the AWS Management console or AWS CLI. You can create with AWS CLI as shown below: 
+
+```
+aws ecr create-repository --repository-name genai-realesrgan-4x-super-resolution --region [aws region name]
+```
+
 ```
 cd realesrgan
 ./build_and_push_docker.sh -a [aws account number] -r [aws region name]
